@@ -1,6 +1,6 @@
 
 #FROM openjdk:alpine
-FROM gafiatulin/alpine-sbt
+FROM bigtruedata/sbt:0.13.15-alpine-2.11.11
 
 RUN apk update && apk add bash git sudo
 RUN adduser doors -g "" -D -h /var/doors/

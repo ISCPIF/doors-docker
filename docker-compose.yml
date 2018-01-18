@@ -4,15 +4,16 @@ doors:
     - "./data/doors/home/:/var/doors/.doors/"
   links:
     - mail:mail
+  restart: always
   # ports:
   #   - 8989:8989
 mail:
   build: ./mail
   environment:
     - HOST=doors.iscpif.fr
-  dns:
+  #dns:
     # we assume this is the local DNS
-    - 192.168.1.1
+    #- 192.168.1.1
   volumes:
     - "./data/mail/spool:/var/spool/postfix"
 https-portal:
